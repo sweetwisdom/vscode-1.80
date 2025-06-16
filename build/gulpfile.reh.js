@@ -218,7 +218,7 @@ function nodejs(platform, arch) {
 		case 'linux':
 			return (product.nodejsRepository !== 'https://nodejs.org' ?
 				fetchGithub(product.nodejsRepository, { version: `${nodeVersion}-${internalNodeVersion}`, name: `node-v${nodeVersion}-${platform}-${arch}.tar.gz`, checksumSha256 }) :
-				fetchUrls(`/dist/v${nodeVersion}/node-v${nodeVersion}-${platform}-${arch}.tar.gz`, { base: 'https://nodejs.org', checksumSha256 })
+				fetchUrls(`/syslab-assets/Devops/ide-deploy/node-v${nodeVersion}-${platform}-${arch}.tar.gz`, { base: 'https://oss-dev.tongyuan.cc', checksumSha256 })
 			).pipe(flatmap(stream => stream.pipe(gunzip()).pipe(untar())))
 				.pipe(filter('**/node'))
 				.pipe(util.setExecutableBit('**'))

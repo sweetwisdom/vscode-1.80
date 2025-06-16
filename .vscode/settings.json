@@ -92,11 +92,9 @@
 	],
 	"git.ignoreLimitWarning": true,
 	"git.branchProtection": [
-		"main",
-		"distro",
-		"release/*"
+
 	],
-	"git.branchProtectionPrompt": "alwaysCommitToNewBranch",
+	"git.branchProtectionPrompt": "alwaysCommit",
 	"git.branchRandomName.enable": true,
 	"git.pullBeforeCheckout": true,
 	"git.mergeEditor": true,
